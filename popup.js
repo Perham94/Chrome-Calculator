@@ -12,31 +12,39 @@ chrome.storage.sync.get('color', function(data) {
   });
 };
 */
+$(document).ready(function () {
+ /*  let addition = document.getElementById('addition');
+  let subtraction = document.getElementById('subtraction');
+  let multiply = document.getElementById('multiply');
+  let divide = document.getElementById('divide');
+  let result = document.getElementById('result');
+  let numberInput = document.getElementById('numberInput');
 
-let addition = document.getElementById('addition');
-let subtraction = document.getElementById('subtraction');
-let multiply = document.getElementById('multiply');
-let divide = document.getElementById('divide');
-let result = document.getElementById('result');
+  let nine = document.getElementById('9');
+  let eight = document.getElementById('8');
+  let seven = document.getElementById('7');
+  let six = document.getElementById('6');
+  let five = document.getElementById('5');
+  let four = document.getElementById('4');
+  let three = document.getElementById('3');
+  let two = document.getElementById('2');
+  let one = document.getElementById('1');
+  let zero = document.getElementById('0');
+  let com = document.getElementById('comma');
+ */
+  //$('#numberInput').on();
 
-addition.onclick = function (element) {
 
-  alert("+");
+  $('#calculator').on('click', 'button', function () {
+    let val = $(this).val();
+    console.log(val);   
+    if (val == "1") {
+      alert("you pressed 1");
+         
+    }
+  });
 
-};
 
-subtraction.onclick = function (element) {
 
-    console.log("-");
 
-};
-multiply.onclick = function (element) {
-
-    console.log("*");
-
-};
-divide.onclick = function (element) {
-
-    console.log("/");
-
-};
+});
