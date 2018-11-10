@@ -12,39 +12,109 @@ chrome.storage.sync.get('color', function(data) {
   });
 };
 */
+
 $(document).ready(function () {
- /*  let addition = document.getElementById('addition');
-  let subtraction = document.getElementById('subtraction');
-  let multiply = document.getElementById('multiply');
-  let divide = document.getElementById('divide');
-  let result = document.getElementById('result');
-  let numberInput = document.getElementById('numberInput');
-
-  let nine = document.getElementById('9');
-  let eight = document.getElementById('8');
-  let seven = document.getElementById('7');
-  let six = document.getElementById('6');
-  let five = document.getElementById('5');
-  let four = document.getElementById('4');
-  let three = document.getElementById('3');
-  let two = document.getElementById('2');
-  let one = document.getElementById('1');
-  let zero = document.getElementById('0');
-  let com = document.getElementById('comma');
- */
-  //$('#numberInput').on();
-
 
   $('#calculator').on('click', 'button', function () {
     let val = $(this).val();
-    console.log(val);   
+    console.log(val);
     if (val == "1") {
-      alert("you pressed 1");
-         
+      $('#numberInput').append(1);
+      return;
     }
+    if (val == "2") {
+      $('#numberInput').append(2);
+      return;
+    }
+    if (val == "3") {
+      $('#numberInput').append(3);
+      return;
+    }
+    if (val == "4") {
+      $('#numberInput').append(4);
+      return;
+    }
+    if (val == "5") {
+      $('#numberInput').append(5);
+      return;
+    }
+    if (val == "6") {
+      $('#numberInput').append(6);
+      return;
+    }
+    if (val == "7") {
+      $('#numberInput').append(7);
+      return;
+    }
+    if (val == "8") {
+      $('#numberInput').append(8);
+      return;
+    }
+    if (val == "9") {
+      $('#numberInput').append(9);
+      return;
+    }
+    if (val == "0") {
+      $('#numberInput').append(0);
+      return;
+    }
+    if (val == "CE") {
+      $('#numberInput').html("");
+      return;
+    }
+    if (val == "C") {
+      $('#numberInput').html("");
+      return;
+    }
+    let a = parseInt($('#numberInput').html());
+    $('#numberInput').html("");
+    if (val == "+" || "-" || "*" || "/") {
+      if (b != null && val == "+") {
+    
+        result(add(a, b));
+        b = null;
+      }
+      else if (b != null && val == "-") {
+        result(subtraction(a, b));
+        b = null;
+      }
+      else if (b != null && val == "*") {
+        result(multiply(a, b));
+        b = null;
+      }
+      else if (b != null && val == "/") {
+        result(divide(a, b));
+        b = null;
+      }
+      else {
+        b = a;
+      }
+      return;
+    }
+
   });
 
-
-
-
 });
+
+
+let b = null;
+
+function add(a, b) {
+  return a + b;
+};
+
+function multiply(a) {
+  return a * b;
+};
+
+function divide(a) {
+  return a / b;
+};
+
+function subtraction(a) {
+  return a - b;
+};
+
+function result(result) {
+  $('#numberInput').html(result);
+};
